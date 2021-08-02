@@ -36,10 +36,6 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: "green",
     alignItems: "center",
   },
-  media: {
-    height: 0,
-    paddingTop: "56.25%", // 16:9
-  },
 }));
 
 function App() {
@@ -57,7 +53,7 @@ function App() {
       "https://api.twitch.tv/helix/search/channels?query=" + string;
     let data = await axios.get(webApiUrl, {
       headers: {
-        "Client-Id": `32fyveq0ijao3rp00hzi2l86bg5n6m`, //Should never be exposed on the frontend
+        "Client-Id": `32fyveq0ijao3rp00hzi2l86bg5n6m`, //Should never Gbe exposed on the frontend
         Authorization: `Bearer ${API_KEY}`,
       },
     });

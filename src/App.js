@@ -53,7 +53,7 @@ function App() {
       "https://api.twitch.tv/helix/search/channels?query=" + string;
     let data = await axios.get(webApiUrl, {
       headers: {
-        "Client-Id": `32fyveq0ijao3rp00hzi2l86bg5n6m`, //Should never Gbe exposed on the frontend
+        "Client-Id": `someTestClientID`, //Should never Gbe exposed on the frontend
         Authorization: `Bearer ${API_KEY}`,
       },
     });
@@ -76,7 +76,7 @@ function App() {
     await new Promise((resolve) => setTimeout(resolve, stallTime));
   }
   var fetchKeySecurely = async () => {
-    var data = "wmv1l0yuvhv6demmb3myd6p1ss29pi"; //Should never be exposed on the frontend
+    var data = "someTestdata"; //Should never be exposed on the frontend
     await serverDelay(500);
     return data;
   };
